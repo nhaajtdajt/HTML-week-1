@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+    <h1 >
+        BÀI TÂP HTML TUẦN 1
+    </h1>
+    <h2>
+        Họ và tên: Trương Nhật Đạt <br>
+        MSSV: 23120231 <br>
+        Lớp: 23CTT3
+    </h2>
+    <img src = "image.png" style = "width: 800px; height: auto; display: inline" usemap="#myMap"> 
+
+    <map name="myMap">
+        <area shape="circle" coords="252px,298px,30px" href = "https://chatgpt.com/c/68d7f58a-5a88-832a-9d1c-a544cfd1611f">
+        <area shape="circle" coords="402px,323px,35px" href = "https://chatgpt.com/c/68d7f58a-5a88-832a-9d1c-a544cfd1611f">
+        <area shape="circle" coords="498px,340px,26px" href = "https://chatgpt.com/c/68d7f58a-5a88-832a-9d1c-a544cfd1611f">
+        <area shape="circle" coords="601px,342px,30px" href = "https://chatgpt.com/c/68d7f58a-5a88-832a-9d1c-a544cfd1611f">
+    </map>
+    </div>
+
+
+
+    <script>
+        let img = document.querySelector("img");
+        img.addEventListener("click", e => {
+        let rect = img.getBoundingClientRect();
+        let x = e.clientX - rect.left;
+        let y = e.clientY - rect.top;
+        console.log("Trong ảnh → X:", x, "Y:", y);
+});
+    </script>
+</body>
+</html>
